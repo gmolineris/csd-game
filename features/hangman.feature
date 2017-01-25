@@ -1,4 +1,3 @@
-
 Feature: Hangman game init
 
 Scenario: Usuario inicia Hangman
