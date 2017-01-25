@@ -3,3 +3,4 @@ behave
 behave-jenkins
 splinter[flask]
 nose
+coverage
