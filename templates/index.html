@@ -2,5 +2,10 @@
 <title>Hangman</title>
 <body>
 	<h1>Hangman</h1>
+<form action="/validate" method="POST">
+    <input id="word" name="word"/>
+    <input type="submit" id="checkButton" name="checkButton" value="CHECK"/>
+</form>
+<p type="result" id="result" name="result"> {{ result }} </p>
 </body>
 </html> 

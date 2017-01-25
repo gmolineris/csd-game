@@ -10,3 +10,16 @@ def step_impl(context):
 @then(u'juego muestra {gameName}')
 def step_impl(context, gameName):
     	assert gameName in browser.html
+
+@when(u'usuario ingresa la letra {letra}')
+def step_impl(context, letra):
+    browser.fill('word',letra)
+    browser.find_by_id('checkButton')[0].click()    
+
+@then(u'sistema indica juego exitoso')
+def step_impl(context):
+    assert 'True' in browser.html
+
+@then(u'sistema indica juego fallido')
+def step_impl(context):
+    assert 'False' in browser.html
