@@ -14,8 +14,9 @@ def hello_hangman():
 @app.route('/validate', methods=['POST'])
 def validateWord():
     value = request.form['word']
-    result = hangman.validate(value)
-    return render_template('index.html', result=result)
+    #result = hangman.validate(value)
+    (body,partial) = hangman.validate(value)
+    return render_template('index.html', body=body, partial=partial)
 
 if __name__ == "__main__":
     app.run()
